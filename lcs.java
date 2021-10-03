@@ -3,17 +3,21 @@ import Java.util.*;
 import java.io.*;   
 import java.util.Scanner;  
     
-class LCSExample1 {  
+class LCSExample1 
+{  
       
    
-    public static String findLengthOfLCS(String str1, String str2, int p, int q) {  
+    public static String findLengthOfLCS(String str1, String str2, int p, int q)
+    {  
       
         
         int[][] tableForLCS = new int[p + 1][q + 1];  
   
         
-        for (int i = 0; i <= p; i++) {  
-            for (int j = 0; j <= q; j++) {  
+        for (int i = 0; i <= p; i++)
+        {  
+            for (int j = 0; j <= q; j++)
+            {  
                 if (i == 0 || j == 0)  
                     tableForLCS[i][j] = 0;    
                 else if (str1.charAt(i - 1) == str2.charAt(j - 1))  
@@ -31,8 +35,10 @@ class LCSExample1 {
   
         int i = p, j = q;  
         String lcs ="";  
-        while (i > 0 && j > 0) {  
-            if (str1.charAt(i - 1) == str2.charAt(j - 1)) {  
+        while (i > 0 && j > 0) 
+        {  
+            if (str1.charAt(i - 1) == str2.charAt(j - 1)) 
+            {  
                   
                 longestCommonSubsequence[index - 1] = str1.charAt(i - 1);  
                 i--;  
@@ -50,16 +56,17 @@ class LCSExample1 {
               
         return lcs;  
     }  
-    public static void main(String[] args) {  
+    public static void main(String[] args)
+    {  
           
         String str1, str2, LCS;  
           
         Scanner sc= new Scanner(System.in); ream.  
         System.out.print("Enter first sequence: ");  
-        str1 = sc.nextLine(); //reads string.  
+        str1 = sc.nextLine();   
           
         System.out.print("Enter second sequence: ");  
-        str2 = sc.nextLine(); //reads string.  
+        str2 = sc.nextLine(); 
           
         int p = str1.length();  
         int q = str2.length();  
